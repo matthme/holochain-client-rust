@@ -9,13 +9,13 @@ name = "holochain_client"
 readme = "README.md"
 repository = "https://github.com/holochain/holochain-client-rust"
 resolver = "2"
-version = "0.5.0-dev.29"
+version = "0.5.0-dev.31"
 
 [workspace]
 members = ["fixture/zomes/foo"]
 
 [workspace.dependencies]
-holochain_zome_types = "0.3.0-beta-dev.28"
+holochain_zome_types = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
 
 [dependencies]
 again = "0.1"
@@ -27,23 +27,23 @@ rand = { version = "0.8" }
 async-trait = "0.1"
 parking_lot = "0.12.1"
 
-holo_hash = { version = "0.3.0-beta-dev.23", features = ["encoding"] }
-holochain_conductor_api = "0.3.0-beta-dev.38"
-holochain_websocket = "0.3.0-beta-dev.15"
-holochain_serialized_bytes = "0.0.53"
-holochain_types = "0.3.0-beta-dev.35"
-holochain_nonce = "0.3.0-beta-dev.25"
+holo_hash = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe", features = ["encoding"] }
+holochain_conductor_api = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
+holochain_websocket = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
+holochain_serialized_bytes = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
+holochain_types = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
+holochain_nonce = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
 holochain_zome_types = { workspace = true }
 
-lair_keystore_api = { version = "0.4.0", optional = true }
+lair_keystore_api = { version = "0.4.4", optional = true }
 
 tokio = { version = "1.36", features = ["rt"] }
 
 [dev-dependencies]
 arbitrary = "1.2"
-holochain = { version = "0.3.0-beta-dev.39", features = ["test_utils"] }
+holochain = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe", features = ["test_utils"] }
 rand = "0.8"
-kitsune_p2p_types = "0.3.0-beta-dev.21"
+kitsune_p2p_types = { git = "https://github.com/holochain/holochain", rev = "1ddfd2d19c810305ed4d8b9b117c23e338700efe" }
 
 [features]
 default = ["lair_signing"]
